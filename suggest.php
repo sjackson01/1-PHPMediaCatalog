@@ -6,3 +6,9 @@ include("inc/header.php");
 <h1>Suggest a Media item</h1>
 
 </div>
+
+<?php
+
+include("inc/footer.php");
+
+?>
