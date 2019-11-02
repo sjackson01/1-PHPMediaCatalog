@@ -1,5 +1,9 @@
 
-		<div class="section catalog random">
+    <?php
+    include("inc/header.php");
+    ?>
+
+    <div class="section catalog random">
 
 			<div class="wrapper">
 
