@@ -1,6 +1,6 @@
 
     <?php
-  
+    $pageTitle = "Personal Media Library";
     include("inc/header.php");
     ?>
 
