@@ -1,14 +1,4 @@
 <?php
-//Create catalog array with array keys
-$catalog = array();
-$catalog[101] = "Design Patterns";
-$catalog[201] = "Forrest Gumpp";
-$catalog[301] = "Beethoven";
-$catalog[102] = "Clean Code";
-
-//Add one element to $catalog array    
-$catalog[] = "Clean Code"; 
-
 //Default category
 $pageTitle = "Full Catalog";
 
