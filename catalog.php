@@ -1,4 +1,8 @@
 <?php
+    $catalog = array(
+        "Design Patterns", 
+        "Forrest Gump", 
+        "Beethoven",);
 //Default category
     $pageTitle = "Full Catalog";
 //Default no active state underline 'null'
@@ -18,12 +22,23 @@
             $section = "music";
         }
     }     
-include("inc/header.php");
+    include("inc/header.php");
 ?>
-<div class ="section page">
-    <!--Add: page title -->
-    <h1><?php echo $pageTitle; ?></h1>
+<div class ="section catalog page">
+    <div class="wrapper">
+            <!--Add: page title -->
+        <h1><?php echo $pageTitle; ?></h1>
+        <ul> 
+            <?php
+            //Assign each $catalog item to variable $item 
+            foreach($catalog as $item){
+                echo "<li>" . $item . "</li>";
+            }
+            ?>
+        </ul>
+    </div>
 </div>
+
 <?php
     include("inc/footer.php");
 ?>
