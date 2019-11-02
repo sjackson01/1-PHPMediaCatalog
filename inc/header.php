@@ -1,7 +1,7 @@
 
 <html>
 <head>
-	<title><?php echo $pageTitle?></title>
+	<title><?php echo "Personal Media Library"?></title>
 	<link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
 <body>
