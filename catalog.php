@@ -1,27 +1,35 @@
 <?php
-    $catalog = array(
-        "Design Patterns", 
-        "Forrest Gump", 
-        "Beethoven",);
+//Create catalog array with array keys
+$catalog = array();
+$catalog[101] = "Design Patterns";
+$catalog[201] = "Forrest Gumpp";
+$catalog[301] = "Beethoven";
+$catalog[102] = "Clean Code";
+
+//Add one element to $catalog array    
+$catalog[] = "Clean Code"; 
+
 //Default category
-    $pageTitle = "Full Catalog";
+$pageTitle = "Full Catalog";
+
 //Default no active state underline 'null'
-    $section = null;    
+$section = null;    
+
 //Check if cat is valid query string from nav
-    if(isset($_GET["cat"])){
+if(isset($_GET["cat"])){
 //Check category and display associated page
-        if($_GET["cat"] == "books"){
-            $pageTitle = "Books";
-            //Underline books if cat is books
-            $section = "books";
-        }else if($_GET["cat"] == "movies"){
-            $pageTitle = "Movies";
-            $section = "movies";
-        }else if($_GET["cat"] == "music"){
-            $pageTitle = "Music";
-            $section = "music";
-        }
-    }     
+    if($_GET["cat"] == "books"){
+        $pageTitle = "Books";
+        //Underline books if cat is books
+        $section = "books";
+    }else if($_GET["cat"] == "movies"){
+        $pageTitle = "Movies";
+        $section = "movies";
+    }else if($_GET["cat"] == "music"){
+        $pageTitle = "Music";
+        $section = "music";
+    }
+}     
     include("inc/header.php");
 ?>
 <div class ="section catalog page">
