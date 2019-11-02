@@ -13,10 +13,10 @@
 			<h1 class="branding-title"><a href="/">Personal Media Library</a></h1>
 
 			<ul class="nav">
-                <li class="books"<a href="#">Books</a></li>
-                <li class="movies"<a href="#">Movies</a></li>
-                <li class="music"<a href="#">Music</a></li>
-                <li class="suggest" <a href="#">Suggest</a></li>
+                <li class="books"><a href="#">Books</a></li>
+                <li class="movies"><a href="#">Movies</a></li>
+                <li class="music"><a href="#">Music</a></li>
+                <li class="suggest"><a href="#">Suggest</a></li>
             </ul>
 
 		</div>
@@ -71,7 +71,7 @@
     <li><a href="https://www.facebook.com/TeamTreehouse">Facebook</a></li>
   </ul>
 
-  <p>&copy; Personal Media Library</p>
+  <p>&copy;<?php echo date("Y"); ?> Personal Media Library</p>
 
 </div>
 
