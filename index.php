@@ -1,7 +1,7 @@
 
 <html>
 <head>
-	<title></title>
+	<title><?php echo "Personal Media Library"?></title>
 	<link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
 <body>
@@ -9,6 +9,7 @@
 	<div class="header">
 
 		<div class="wrapper">
+      
 
 			<h1 class="branding-title"><a href="/">Personal Media Library</a></h1>
 
