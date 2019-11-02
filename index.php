@@ -1,6 +1,8 @@
 
     <?php
     $pageTitle = "Personal Media Library";
+    //Prevent error from active state
+    $section = null;
     include("inc/header.php");
     ?>
 

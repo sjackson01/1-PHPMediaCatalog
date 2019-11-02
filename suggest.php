@@ -2,6 +2,8 @@
 //Create variable before include in order to reference
 //Within included file
 $pageTitle = "Suggest a Media Item";
+//Create active state
+$section = "suggest";
 include("inc/header.php");
 ?>
 
