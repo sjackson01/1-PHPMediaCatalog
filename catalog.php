@@ -31,7 +31,7 @@ if(isset($_GET["cat"])){
         <h1><?php echo $pageTitle; ?></h1>
         <ul class="items"> 
             <?php
-            //Assign each $catalog key to variable $item 
+            //Foreach img src from data.php
             foreach($catalog as $item){
                 echo "<li><a href='#'><img src ='"
                 . $item["img"] . "' alt = '"
