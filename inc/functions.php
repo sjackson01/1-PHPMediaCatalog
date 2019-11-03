@@ -11,6 +11,10 @@ function get_item_html($id,$item){
 }
 
 function array_category($catalog, $category){
+    if($category == null){
+        //Ruturn an array of keys only
+        return array_keys($catalog);
+    }
     $output = array();
     foreach($catalog as $id => $item){
         //If $category id matches category $item add to $output array
