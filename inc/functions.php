@@ -30,6 +30,8 @@ function array_category($catalog, $category){
         }
     }
     //Sort array titles 
+
+    
     asort($output);
     //Return only the keys
     return array_keys($output);
