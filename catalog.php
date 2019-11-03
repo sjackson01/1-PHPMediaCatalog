@@ -33,7 +33,9 @@ if(isset($_GET["cat"])){
         <h1><?php echo $pageTitle; ?></h1>
         <ul class="items"> 
             <?php
+            //Add array to catagories
             $categories = array_category($catalog, $section);
+            //Display "img" src and "title" alt 
             foreach($categories as $id){
               echo get_item_html($id,$catalog[$id]);
             }
