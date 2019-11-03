@@ -1,7 +1,6 @@
 <?php
 //Include data.php arrays
 include("inc/data.php");
-//Include functions.php
 include("inc/functions.php");
 
 //Default category
@@ -24,8 +23,8 @@ if(isset($_GET["cat"])){
         $pageTitle = "Music";
         $section = "music";
     }
-}     
-    include("inc/header.php");
+}    
+include("inc/header.php");
 ?>
 <div class ="section catalog page">
     <div class="wrapper">
