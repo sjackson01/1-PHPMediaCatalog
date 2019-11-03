@@ -18,6 +18,7 @@ function array_category($catalog, $category){
         return array_keys($catalog);
     }
     $output = array();
+    //The if statement will do nothing if null so no need for else statment
     foreach($catalog as $id => $item){
         //If $category id matches category $item add to $output array
         if(strtolower($category) == strtolower($item["category"])){
