@@ -2,21 +2,38 @@
 include("inc/data.php");
 include("inc/functions.php");
 
-$pageTitle = "Full Catalog";
-
-$section = null;    
-
-if(isset($_GET["cat"])){
-    if($_GET["cat"] == "books"){
-        $pageTitle = "Books";
-        $section = "books";
-    }else if($_GET["cat"] == "movies"){
-        $pageTitle = "Movies";
-        $section = "movies";
-    }else if($_GET["cat"] == "music"){
-        $pageTitle = "Music";
-        $section = "music";
+if(isset($_GET["id"])){
+    $id = $_GET["id"];
+    if(isset($catalog[$id])){
+        $item = $catalog[$id];
     }
 }     
+
+if(!isset($item)) {
+    //If item is not set tell the browser to look for a different page
+    header("location:catalog.php");
+    //Make sure nothing else is processed while re-direct command is processing
+    exit; 
+}
+
+$pageTitle = $item["title"];
+
+$section = null;  
+
 include("inc/header.php");
+?>
+
+<div class="sectioin page">
+
+    <div class="wrapper">
+        <div class="media-picture">
+            <span>
+                <img src="<?php echo $item["img"]; ?>" alt="<?php echo $item["title"]; ?>" />
+            </span>
+        </div>
+    </div>
+
+
+</div>
+
 ?>
