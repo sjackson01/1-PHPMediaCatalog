@@ -30,7 +30,15 @@ if(isset($_GET["cat"])){
 <div class ="section catalog page">
     <div class="wrapper">
             <!--Add: page title -->
-        <h1><?php echo $pageTitle; ?></h1>
+        <h1>
+            <?php
+            //Add link to full catalog when category is active 
+            if($section != null){
+                echo "<a href='catalog.php'>Full Catalog</a> &gt; ";
+            }
+            echo $pageTitle ;
+            ?>
+        </h1>
         <ul class="items"> 
             <?php
             //Add array to catagories
