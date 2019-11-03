@@ -1,4 +1,7 @@
 <?php
+//Include data.php arrays
+include("inc/data.php");
+
 //Default category
 $pageTitle = "Full Catalog";
 
@@ -26,11 +29,15 @@ if(isset($_GET["cat"])){
     <div class="wrapper">
             <!--Add: page title -->
         <h1><?php echo $pageTitle; ?></h1>
-        <ul> 
+        <ul class="items"> 
             <?php
-            //Assign each $catalog item to variable $item 
+            //Assign each $catalog key to variable $item 
             foreach($catalog as $item){
-                echo "<li>" . $item . "</li>";
+                echo "<li><a href='#'><img src ='"
+                . $item["img"] . "' alt = '"
+                . $item["title"] . "' />"
+                . "<p>View Details</p>"
+                . "</a></li>";
             }
             ?>
         </ul>
