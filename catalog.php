@@ -33,7 +33,7 @@ if(isset($_GET["cat"])){
         <h1><?php echo $pageTitle; ?></h1>
         <ul class="items"> 
             <?php
-            //Modify array to get item $id and key value($item)
+            //Modify array to get item $id = $catalog[102] etc and key value($item)
             foreach($catalog as $id => $item){
                 echo get_item_html($id,$item);
             }

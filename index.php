@@ -16,9 +16,14 @@
 
 				<ul class="items">
             <?php
-            //Replace list items with display function
-            foreach($catalog as $id => $item){
-              echo get_item_html($id,$item);
+            $random = array_rand($catalog, 4);
+            /* $random
+            array(4) { 
+                  [0]=> $id=int(102) $catalog[102] = $item["title"]
+            */
+            foreach($random as $id){
+              //$random contains 4 arrays 
+              echo get_item_html($id,$catalog[$id]);
           }
             ?>	
 				</ul>
