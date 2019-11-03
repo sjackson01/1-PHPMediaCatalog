@@ -10,6 +10,8 @@ function get_item_html($id,$item){
     return $output;
 }
 
+//Pass in $catalog, $category parameters 
+//Return an array of keys 
 function array_category($catalog, $category){
     if($category == null){
         //Ruturn an array of keys only
