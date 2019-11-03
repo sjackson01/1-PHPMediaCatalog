@@ -9,4 +9,16 @@ function get_item_html($id,$item){
                 . "</a></li>";
     return $output;
 }
+
+function array_category($catalog, $category){
+    $output = array();
+    foreach($catalog as $id => $item){
+        //If $category id matches category $item add to $output array
+        if(strtolower($category) == strtolower($item["category"])){
+            $output[] = $id;
+        }
+    }
+    return $output;
+}
+
 ?>

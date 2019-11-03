@@ -7,7 +7,7 @@ include("inc/functions.php");
 //Default category
 $pageTitle = "Full Catalog";
 
-//Default no active state underline 'null'
+//Default category
 $section = null;    
 
 //Check if cat is valid query string from nav
@@ -33,11 +33,9 @@ if(isset($_GET["cat"])){
         <h1><?php echo $pageTitle; ?></h1>
         <ul class="items"> 
             <?php
-            //$id is not used yet for some reason
-            //Pull all $items = "title" => "Some test"
-            //Function returns "title" "src" formatted
-            foreach($catalog as $id => $item){
-                echo get_item_html($id,$item);
+            $categories = array_category($catalog, $section);
+            foreach($categories as $id){
+              echo get_item_html($id,$catalog[$id]);
             }
             ?>
         </ul>
