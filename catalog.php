@@ -1,6 +1,8 @@
 <?php
 //Include data.php arrays
 include("inc/data.php");
+//Include functions.php
+include("inc/functions.php");
 
 //Default category
 $pageTitle = "Full Catalog";
@@ -31,13 +33,9 @@ if(isset($_GET["cat"])){
         <h1><?php echo $pageTitle; ?></h1>
         <ul class="items"> 
             <?php
-            //Foreach img src from data.php
-            foreach($catalog as $item){
-                echo "<li><a href='#'><img src ='"
-                . $item["img"] . "' alt = '"
-                . $item["title"] . "' />"
-                . "<p>View Details</p>"
-                . "</a></li>";
+            //Modiry array to get item $id and key value($item)
+            foreach($catalog as $id => $item){
+                echo get_item_html($id,$item);
             }
             ?>
         </ul>
