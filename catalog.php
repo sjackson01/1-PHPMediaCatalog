@@ -33,7 +33,9 @@ if(isset($_GET["cat"])){
         <h1><?php echo $pageTitle; ?></h1>
         <ul class="items"> 
             <?php
-            //Modify array to get item $id = $catalog[102] etc and key value($item)
+            //Pull all $ids = $catalog[101] 
+            //Pull all $items = "title" => "Some test"
+            //Function returns "title" "src" formatted
             foreach($catalog as $id => $item){
                 echo get_item_html($id,$item);
             }
