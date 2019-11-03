@@ -13,19 +13,26 @@ function get_item_html($id,$item){
 //Pass in $catalog, $category parameters 
 //Return an array of keys 
 function array_category($catalog, $category){
-    if($category == null){
-        //Ruturn an array of keys only
-        return array_keys($catalog);
-    }
     $output = array();
     //The if statement will do nothing if null so no need for else statment
     foreach($catalog as $id => $item){
-        //If $category id matches category $item add to $output array
-        if(strtolower($category) == strtolower($item["category"])){
-            $output[] = $id;
+        //Sort items that match category or if null sort all the items
+        if($category == null OR strtolower($category) == strtolower($item["category"])){
+            //Create variable used to sort by tititle
+            $sort = $item["title"];
+            //Remove prepositions from title names for alpha order
+            //ltrim = ignore "The " at beginning of title
+            $sort = ltrim($sort,"The ");
+            $sort = ltrim($sort,"A ");
+            $sort = ltrim($sort,"An ");
+            //Assign keys and value to $output array
+            $output[$id] = $sort;
         }
     }
-    return $output;
+    //Sort the output array
+    asort($output);
+    //Return only the keys
+    return array_keys($output);
 }
 
 ?>
