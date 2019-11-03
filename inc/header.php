@@ -11,7 +11,7 @@
 		<div class="wrapper">
       
 
-			<h1 class="branding-title"><a href="/">Personal Media Library</a></h1>
+			<h1 class="branding-title"><a href="index.php">Personal Media Library</a></h1>
 
 			<ul class="nav"> 			<!--Add query string --> 
 										<!--Add active state -->
