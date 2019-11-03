@@ -16,20 +16,20 @@ function array_category($catalog, $category){
     $output = array();
     //The if statement will do nothing if null so no need for else statment
     foreach($catalog as $id => $item){
-        //Sort items that match category or if null sort all the items
+        //Will not execute both since argument cannot be null and match
         if($category == null OR strtolower($category) == strtolower($item["category"])){
-            //Create variable used to sort by tititle
+            //Null = all key values, match only matched values 
             $sort = $item["title"];
             //Remove prepositions from title names for alpha order
             //ltrim = ignore "The " at beginning of title
             $sort = ltrim($sort,"The ");
             $sort = ltrim($sort,"A ");
             $sort = ltrim($sort,"An ");
-            //Assign keys and value to $output array
+            //$output[203] = "Clean Coding"
             $output[$id] = $sort;
         }
     }
-    //Sort the output array
+    //Sort array titles 
     asort($output);
     //Return only the keys
     return array_keys($output);
