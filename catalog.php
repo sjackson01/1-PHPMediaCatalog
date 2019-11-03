@@ -33,7 +33,7 @@ if(isset($_GET["cat"])){
         <h1><?php echo $pageTitle; ?></h1>
         <ul class="items"> 
             <?php
-            //Pull all $ids = $catalog[101] 
+            //$id is not used yet for some reason
             //Pull all $items = "title" => "Some test"
             //Function returns "title" "src" formatted
             foreach($catalog as $id => $item){

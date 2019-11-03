@@ -1,6 +1,5 @@
 <?php
-//Pass item id and interior array for single item
-//item ID = $catalog[101] interior array = "title"
+//$id is not used yet for some reason
 //We can use this function on mutilple pages
 function get_item_html($id,$item){
     $output = "<li><a href='#'><img src ='"

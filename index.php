@@ -23,7 +23,7 @@
             */
             foreach($random as $id){
               //$random contains 4 arrays 
-              //$id = $catalog[101]
+              //$id is not used yet for some reason
               //$catalog[$id] = all keys and values from the arrays
               //Function returns "title" "img" formatted 
               echo get_item_html($id,$catalog[$id]);
